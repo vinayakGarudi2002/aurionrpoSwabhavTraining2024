@@ -1,0 +1,38 @@
+package com.aurionpro.model;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class AreaCalculatorTest {
+	
+	AreaCalculator operation;
+	
+	@BeforeEach
+	void init() {
+		 operation = new AreaCalculator();
+	}
+	
+	@AfterEach
+	void status() {
+		System.out.println("Test Executed");
+	}
+
+	@Test
+	void testCalculateAreaOfCircle() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculateAreaOfRectangle() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculateAreaOfTriangle() {
+		fail("Not yet implemented");
+	}
+
+}

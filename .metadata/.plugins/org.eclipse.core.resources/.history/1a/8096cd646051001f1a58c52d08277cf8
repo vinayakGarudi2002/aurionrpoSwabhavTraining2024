@@ -1,0 +1,31 @@
+package com.aurionpro.model;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class OperationsTest {
+
+	@Test
+	void testAddition() {
+		Operations operation = new Operations();
+		int actual=operation.addition(2, 2);
+		int expected=4;
+		
+		assertEquals(expected,actual);
+
+	}
+
+	@Test
+	void testSubration() {
+		Operations operation = new Operations();
+		assertEquals(3,operation.subration(5, 2));
+	}
+
+	@Test
+	void testMultiplication() {
+		Operations operation = new Operations();
+		assertEquals(3,operation.multiplication(1, 3));	
+	}
+
+}

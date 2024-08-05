@@ -1,0 +1,82 @@
+package com.aurionpro.model;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class WinningStatusTest {
+
+    private Board board;
+    private WinningStatus winningStatus;
+
+    @BeforeEach
+    void setUp() {
+        board = new Board(3); // Initialize a 3x3 board for testing
+        winningStatus = new WinningStatus();
+        board.initialize();
+    }
+
+    @Test
+    void testCheckWin() {
+        // Test horizontal win
+        board.updateBoard(0, 0, 'X');
+        board.updateBoard(0, 1, 'X');
+        board.updateBoard(0, 2, 'X');
+        assertTrue(winningStatus.checkWin(board, 0, 2), "Player X should win with a horizontal line");
+
+        // Test vertical win
+        board.initialize();
+        board.updateBoard(0, 0, 'O');
+        board.updateBoard(1, 0, 'O');
+        board.updateBoard(2, 0, 'O');
+        assertTrue(winningStatus.checkWin(board, 2, 0), "Player O should win with a vertical line");
+
+        // Test diagonal win (top-left to bottom-right)
+        board.initialize();
+        board.updateBoard(0, 0, 'X');
+        board.updateBoard(1, 1, 'X');
+        board.updateBoard(2, 2, 'X');
+        assertTrue(winningStatus.checkWin(board, 2, 2), "Player X should win with a diagonal line");
+
+        // Test diagonal win (top-right to bottom-left)
+        board.initialize();
+        board.updateBoard(0, 2, 'O');
+        board.updateBoard(1, 1, 'O');
+        board.updateBoard(2, 0, 'O');
+        assertTrue(winningStatus.checkWin(board, 2, 0), "Player O should win with a diagonal line");
+
+        // Test no win
+        board.initialize();
+        board.updateBoard(0, 0, 'X');
+        board.updateBoard(0, 1, 'O');
+        board.updateBoard(0, 2, 'X');
+        board.updateBoard(1, 0, 'O');
+        board.updateBoard(1, 1, 'X');
+        board.updateBoard(1, 2, 'O');
+        board.updateBoard(2, 0, 'X');
+        assertFalse(winningStatus.checkWin(board, 2, 0), "No player should win with this configuration");
+    }
+
+    @Test
+    void testCheckDraw() {
+        int boardSize = board.getSize();
+        
+        // Test for draw
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
+                board.updateBoard(i, j, i % 2 == 0 ? 'X' : 'O');
+            }
+        }
+        assertTrue(winningStatus.checkDraw(boardSize * boardSize, boardSize), "The game should be a draw");
+
+        // Test not draw (board not full)
+        board.initialize();
+        for (int i = 0; i < boardSize - 1; i++) {
+            for (int j = 0; j < boardSize; j++) {
+                board.updateBoard(i, j, i % 2 == 0 ? 'X' : 'O');
+            }
+        }
+        assertFalse(winningStatus.checkDraw((boardSize - 1) * boardSize, boardSize), "The game should not be a draw as the board is not full");
+    }
+}

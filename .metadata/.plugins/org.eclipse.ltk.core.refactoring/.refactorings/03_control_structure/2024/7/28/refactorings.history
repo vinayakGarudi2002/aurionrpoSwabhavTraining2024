@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.aurionpro.selection.test.WaterBillValculator&apos; to &apos;WaterBillCalculator&apos;&#x0D;&#x0A;- Original project: &apos;03_control_structure&apos;&#x0D;&#x0A;- Original element: &apos;com.aurionpro.selection.test.WaterBillValculator&apos;&#x0D;&#x0A;- Renamed element: &apos;com.aurionpro.selection.test.WaterBillCalculator&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;WaterBillValculator&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.aurionpro.selection.test{WaterBillValculator.java[WaterBillValculator" matchStrategy="1" name="WaterBillCalculator" qualified="false" references="true" similarDeclarations="false" stamp="1720606319542" textual="false" version="1.0"/>
+</session>

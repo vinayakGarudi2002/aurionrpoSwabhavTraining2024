@@ -1,0 +1,5 @@
+package com.aurionpo.dip.solution.model;
+
+public interface ILogger {
+
+}

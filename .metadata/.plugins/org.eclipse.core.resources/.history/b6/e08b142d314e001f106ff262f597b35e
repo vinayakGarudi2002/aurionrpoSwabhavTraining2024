@@ -1,0 +1,10 @@
+package com.aurionpro.ocp.violation;
+
+public enum FestivalType {
+	
+	private int  intrestRate;
+	NEWYEAR,DIWALI,HOLI,OTHERS;
+	
+	
+
+}

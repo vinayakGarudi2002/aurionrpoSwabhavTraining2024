@@ -1,0 +1,14 @@
+package com.aurionpro.behavioural.command.model;
+
+public class PastaOrder implements Order {
+    private Chef chef;
+
+    public PastaOrder(Chef chef) {
+        this.chef = chef;
+    }
+
+    @Override
+    public void execute() {
+        chef.cookPasta();
+    }
+}

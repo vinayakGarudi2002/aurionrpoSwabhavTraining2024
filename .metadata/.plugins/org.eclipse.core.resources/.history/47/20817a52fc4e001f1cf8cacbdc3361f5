@@ -1,0 +1,5 @@
+package com.aurionpro.creational.sigleton.model;
+
+public class DatabaseConnect {
+
+}

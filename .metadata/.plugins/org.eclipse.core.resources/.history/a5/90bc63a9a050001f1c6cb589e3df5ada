@@ -1,0 +1,19 @@
+package com.aurionpro.behavioural.command.test;
+
+public class ReasturantTest {
+    public static void main(String[] args) {
+        Chef chef = new Chef();
+        Waiter waiter = new Waiter();
+
+        // Customer orders a burger
+        Order burgerOrder = new BurgerOrder(chef);
+        waiter.takeOrder(burgerOrder);
+        waiter.placeOrder(); // Output: Chef is cooking a burger.
+
+        // Customer orders pasta
+        Order pastaOrder = new PastaOrder(chef);
+        waiter.takeOrder(pastaOrder);
+        waiter.placeOrder(); // Output: Chef is cooking pasta.
+    }
+
+}

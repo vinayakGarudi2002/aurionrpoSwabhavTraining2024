@@ -1,0 +1,24 @@
+package com.aurionpro.structural.facade.mode;
+
+public class MovieFacade {
+	
+
+	
+	public void playDvdPlayer() {
+		
+		DvdPlayer player =new DvdPlayer();
+		player.on();
+		player.setMovie(12);
+		
+		
+	}
+	
+public void playSoundSystem() {
+		
+	}
+
+public void playProjector() {
+	
+}
+
+}

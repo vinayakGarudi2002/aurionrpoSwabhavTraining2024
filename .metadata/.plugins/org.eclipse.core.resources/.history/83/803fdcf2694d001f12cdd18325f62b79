@@ -1,0 +1,19 @@
+package com.aurionpro.test;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class StudentStream {
+
+	public static void main(String[] args) {
+		
+		String[] names= {"Jayesh","Nimesh","Mark","Mahesh","Ramesh"};
+		
+		System.out.println("First 3 students sorted in asscending order");
+		
+		List<String> students= Arrays.asList(names);
+		System.out.println(students.stream().limit(3).sorted());
+
+	}
+
+}

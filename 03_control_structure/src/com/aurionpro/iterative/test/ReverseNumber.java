@@ -1,0 +1,23 @@
+package com.aurionpro.iterative.test;
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		System.out.println("Enter Number: ");
+		Scanner scanner = new Scanner(System.in);
+		int number=scanner.nextInt();
+		int reverse=0;
+		//System.out.println(number%10);
+		
+		while(number>0) {
+			reverse =reverse*10+number%10;
+			number=number/10;
+		}
+		
+		System.out.println("Reverse is: "+reverse);
+	}
+
+
+}

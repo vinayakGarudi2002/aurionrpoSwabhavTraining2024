@@ -1,0 +1,25 @@
+package com.aurionpro.behavioural.state.model;
+
+public class Shipped  implements IPacketState {
+
+	@Override
+	public void next(IPacketState packet) {
+		
+		packet = new 
+	
+		
+	}
+
+	@Override
+	public void current(IPacketState packet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void previous(IPacketState packet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.aurionpro.behavioural.state.model;
+
+public class Delivered implements IPacketState {
+
+	@Override
+	public void next(IPacketState packet) {
+		
+		System.out.println("No further State");
+		  return;
+		
+	}
+
+	@Override
+	public void current(IPacketState packet) {
+		System.out.println("packet is in Ordered state");
+		
+	}
+
+	@Override
+	public void previous(IPacketState packet) {
+		  System.out.println("No previous State");
+		  return;
+		
+	}
+
+}

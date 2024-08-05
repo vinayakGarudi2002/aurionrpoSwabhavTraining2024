@@ -1,0 +1,10 @@
+package com.aurionpro.behavioural.state.model;
+
+public interface IPacketState {
+	
+	public void next(IPacketState packet);
+	public void current(IPacketState packet);
+	public void previous(IPacketState packet);	
+	
+
+}

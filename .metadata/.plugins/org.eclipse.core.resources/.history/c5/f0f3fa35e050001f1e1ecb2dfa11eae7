@@ -1,0 +1,25 @@
+package com.aurionpro.behavioural.command.test;
+
+import com.aurionpro.behavioural.command.model.BurgerOrder;
+import com.aurionpro.behavioural.command.model.Chef;
+import com.aurionpro.behavioural.command.model.Order;
+import com.aurionpro.behavioural.command.model.PastaOrder;
+import com.aurionpro.behavioural.command.model.Waiter;
+
+public class ReasturantTest {
+    public static void main(String[] args) {
+        Chef chef = new Chef();
+        Waiter waiter = new Waiter();
+
+        // Customer orders a burger
+        Order burgerOrder = new BurgerOrder(chef);
+        waiter.takeOrder(burgerOrder);
+        waiter.placeOrder(); // Output: Chef is cooking a burger.
+
+        // Customer orders pasta
+        Order pastaOrder = new PastaOrder(chef);
+        waiter.takeOrder(pastaOrder);
+        waiter.placeOrder(); // Output: Chef is cooking pasta.
+    }
+
+}

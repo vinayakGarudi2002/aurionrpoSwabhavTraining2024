@@ -1,0 +1,22 @@
+package com.aurionpro.behavioural.observer.model;
+
+public class SmsNotifier implements INotifirer {
+
+
+	
+	
+	public void notify(String operation,Account account,double amount) {
+		
+		if(operation=="credit") {
+			System.out.println("Account no.: "+account.getAccountNumber()+"amount credited: "+amount+" current balance: "+account.getBalance()+" previus balance: "+(account.getBalance()-amount));
+		}
+		
+	}
+
+	@Override
+	public void notify(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

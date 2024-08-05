@@ -1,0 +1,13 @@
+package com.aurionpro.ocp.sln;
+
+public class Diwali implements IFestivalInterest {
+	
+	
+
+	@Override
+	public double getInterestRate() {
+		// TODO Auto-generated method stub
+		return 8.5;
+	}
+
+}

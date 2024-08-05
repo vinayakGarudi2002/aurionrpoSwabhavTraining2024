@@ -1,0 +1,9 @@
+package com.aurionpro.creational.factory.model;
+
+public interface IAccountFactory {
+	
+	public IAccount createAccount();
+
+	IAccount createAccount(int accountNumber, String name, double balance);
+
+}
