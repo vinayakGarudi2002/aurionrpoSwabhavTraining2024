@@ -1,9 +1,0 @@
-package com.aurionpro.behavioural.observer.model;
-
-public interface INotifirer {
-	
-	
-
-	public void notifiy(String operation,Account account,double amount);
-
-}

@@ -1,8 +1,0 @@
-package com.aurionpro.srp.violation.model;
-
-public class InvoicePrinter {
-	
-	private Invoice invoice;
-	private TaxCalculator taxCalculator;
-
-}
